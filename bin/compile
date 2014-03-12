@@ -53,6 +53,7 @@ for BUILDPACK in $(cat $1/.buildpacks); do
 
       if [ -x $dir/bin/export ]; then
         echo "Exporting variables" | indent
+        export
         source $dir/bin/export $1
       fi
 
