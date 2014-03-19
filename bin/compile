@@ -51,6 +51,8 @@ for BUILDPACK in $(cat $1/.buildpacks); do
         exit 1
       fi
 
+      ls -al $1/vendor/ruby-2.1.0/lib/
+
       if [ -x $dir/bin/export ]; then
         echo "Exporting variables" | indent
         source $dir/bin/export $1
